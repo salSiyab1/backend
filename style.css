@@ -1,0 +1,381 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    background-color: #cbcbcb;
+}
+.container{
+    height: 100vh;
+    display: flex;
+    color: #4F4F4F;
+    font-family: Basic;
+    font-style: normal;
+}
+a, a:visited, a:hover, a:focus {
+    color: black;  /* Sets the text color */
+    text-decoration: none;  /* Removes underline */
+    outline: none;  /* Removes focus outline */
+}
+
+/* Ensure the sidebar container has appropriate styling */
+.sideBar {
+    margin: 30px;
+    width: 17rem;
+    padding: 2em;
+    height: 80%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column; /* Aligns children (e.g., h1, ul) vertically */
+}
+
+.sideBar #logo {
+    margin-bottom: 2em;
+}
+
+.sideBar .heading {
+    color: rgba(0, 0, 0, 0.51);
+    font-family: Basic;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 16px; /* 160% */
+
+    margin-bottom: 20px;
+}
+
+/* Style for the list and list items */
+.sideBar ul {
+    list-style: none; /* Removes bullet points */
+    padding-left: 0; /* Removes indentation */
+    margin-bottom: 2em;
+}
+
+.sideBar li {
+    display: flex; /* Enables flexbox for each list item */
+    align-items: center; /* Vertical alignment */
+    margin-bottom: 20px; /* Spacing between items */
+    margin-left: 20px;
+}
+
+.sideBar li:hover {
+    background: #DDE8EB;
+    border-radius: 5px;
+}
+
+.sideBar li span {
+    display: flex; /* Flexbox for icon and text wrapper */
+    align-items: center; /* Center alignment of icon and text */
+}
+
+.sideBar i {
+    margin-right: 10px; /* Space between icon and text */
+}
+
+.sideBar button{
+    border-radius: 8px;
+    background: rgba(167, 146, 114, 0.14);
+
+    display: inline-flex;
+    /* padding: 4px 105px 4px 5px; */
+    padding: 10px;
+    align-items: flex-start;
+    gap: 4px;
+
+    border-width: 0;
+
+    margin-bottom: 10px;
+}
+
+/* the webpage is divided into two columns left (sidebar) right (the main content) */
+.Right {
+    width: 70%;
+    padding: 20px;
+}
+
+.navBar {
+    font-size: 18px;
+    display: flex; /* Makes the navbar a flex container */
+    justify-content: space-between; /* Distributes space between nav-side and account-side */
+    padding: 10px 20px; /* Optional: Adds some padding around the contents */
+    margin-top: 30px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.nav-side ul {
+    display: flex; /* Makes the list horizontal */
+    list-style: none; /* Removes list bullets */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+}
+
+.nav-side li {
+    margin-right: 70px; /* Adds space between the menu items */
+}
+
+.nav-side a {
+    text-decoration: none; /* Removes underline from links */
+    color: #333; /* Sets the text color */
+}
+
+.account-side {
+    display: flex; /* Aligns the icons in the account side */
+    gap: 10px; /* Adds space between icons */
+}
+
+.fa-solid { /* Assuming you're using FontAwesome for icons */
+    padding: 5px;
+    background: #ddd; /* Gives a background color to the icons */
+    border-radius: 50%; /* Makes the background circular */
+    font-size: 16px; /* Adjusts the size of the icons */
+}
+
+
+
+.box {
+    margin-top: 20px;
+    background-color: #fff;
+    width: 100%;
+    padding: 20px;
+    padding-bottom: 10px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column; /* Stacks children (title and details) vertically */
+}
+
+.box #name {
+    font-size: 24px; /* Increases font size for better visibility */
+    color: #333; /* Sets a darker color for better readability */
+    margin-bottom: 5px; /* Adds space below the title */
+}
+
+.box i {
+    color: #0061FE;
+    margin-right: 10px; /* Space between the icon and the text */
+}
+
+.box-details {
+    display: flex; /* Flex container, ensures children are laid out horizontally */
+    justify-content: space-between; /* Distributes space evenly between the columns */
+    width: 100%;
+    font-size: 16px;
+}
+
+.box-details h4 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.box-column {
+    flex: 1; /* Gives each column an equal share of the space */
+    padding: 10px; /* Adds padding inside each column */
+    display: flex;
+    flex-direction: column; /* Aligns the content of each column vertically */
+    align-items:center; /* Aligns items to the start of each column */
+}
+
+.box-info {
+    margin-bottom: 10px; /* Adds vertical space between each information item */
+}
+
+.btn-showDetails {
+    margin-top: 5px;
+    font-size: 10px;
+    padding: 10px 20px;
+    background-color: #0061fe; /* Matching the icon color */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.btn-showDetails:hover {
+    background-color: #004cac; /* Darker blue on hover */
+}
+
+
+/* -------------------------------------------------------------------------------------- */
+/* pop up window for box details */
+
+.modal li {
+    list-style: none;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: grid;
+    grid-template-rows: auto auto auto auto auto; /* Five rows */
+    gap: 10px;
+}
+
+#modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+.boxDetail {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns for some details */
+    gap: 20px;
+    padding: 15px;
+}
+
+.boxDetail#modal-leader-name,
+.boxDetail#modal-date-of-creation {
+    grid-column: 1 / -1; /* Full width for single items */
+}
+
+#optionsList {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four equal columns for buttons */
+    gap: 10px;
+    place-items: center;
+}
+
+#optionsList button {
+    padding: 10px;
+    background-color: #0061FE;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#optionsList button:hover {
+    background-color: #004cac;
+}
+
+/* Styling for modal form elements */
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.modal-content input[type="number"],
+.modal-content textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.modal-content input[type="number"]:focus,
+.modal-content textarea:focus {
+    border-color: #0056b3;
+    outline: none;
+}
+
+.modal-content button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.modal-content button:hover {
+    background-color: #0056b3;
+}
+
+.modal-content button:active {
+    background-color: #004094;
+}
+
+#other-options-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+
+.option-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin-top: 10px; /* Adds spacing between buttons */
+}
+
+.loan-detail {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.loan-detail button {
+    padding: 5px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.loan-detail button:hover {
+    background-color: #45a049;
+}
+
+
+.option-button:hover {
+    background-color: #0056b3;
+}
+
+.option-button:active {
+    background-color: #004094;
+}

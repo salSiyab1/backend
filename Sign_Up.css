@@ -1,0 +1,112 @@
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+ }
+    
+    #grid-container{
+         display: grid;
+         height: auto;
+         width: auto;
+         grid-template-columns: auto auto;
+         padding: 1%;
+         font-family: 'Nunito', sans-serif;
+         justify-content: center;
+     }
+     .terms { 
+         padding-left: 3%;
+         padding-top: 3%;
+         padding-bottom: 4%;
+         width: 450px;
+         height: 40px;
+         display: grid;
+         grid-template-columns: 20px 280px 200px;
+      }
+      .signOptions{
+         width: 450px;
+         padding-left: 14%;
+         
+      }
+      .userInfo{
+       padding-left: 7%;
+       width: 400px;
+      }
+      .greet{
+       padding-top: 15%;
+       padding-left: 7%;
+      }
+      .col1{
+         height: auto;
+         width: auto;
+      }
+      .col2{
+       width:auto ;
+       padding-left: 8%;
+      }
+      .img{
+       padding-top: 24%;
+       height: 840;
+       width: 600px;
+       padding-left: 7%;
+    }
+      input[type=text ], input[type = password], input[type = email]{
+         -webkit-border-radius: 80px;
+         -moz-border-radius: 80px;
+          border-radius: 80px;
+          border: 1px solid #000000;
+          color: #000000;
+          width: 450px;
+          height: 60px;
+          padding-left: 10px;
+          background-color: #F7F5F2;
+          
+         }
+         input[type = "submit"]{
+         -webkit-border-radius: 80px;
+         -moz-border-radius: 80px;
+          border-radius: 80px;
+          border: 1px solid #000000;
+          color: #000000;
+          width: 450px;
+          height: 60px;
+          padding-left: 10px;
+          background-color: #F7F5F2;
+         }
+         input[type = "checkbox"]{
+             height: 24px;
+             justify-content: center;
+             
+
+         }
+      a:link{
+         color: black;
+         text-decoration: none;
+      }
+      a:hover{
+         color: blue;
+      }
+      button{
+         height: 80px;
+         width: 120px;
+         border-radius: 50%;
+         border-color: solid rgb(0, 0, 0);
+         background-color: #F7F5F2;
+      }    
+ 
+      .optionBar{
+         padding-left: 15%;
+         padding-top: 2%;
+      } 
+      .orCont{
+         padding-left: 48%;
+         padding-top: 3%;
+         position:static;
+      }
+      .logo{
+       font-size: xx-large;
+      }
+      h3{
+       padding-bottom: 2%;
+       padding-top: 3%;
+      }
+      
